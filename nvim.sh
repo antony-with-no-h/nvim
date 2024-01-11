@@ -8,26 +8,17 @@ install() {
     rm -rf "$TMP_FILE"
 }
 
-config() {
-    local DIR=$1
-
-    if [[ ! -d ~/.config ]]
-    then
-        mkdir -v ~/.config
-    fi
-    
-    cp -r ${DIR}/nvim ~/.config/.
-}
-
-SCRIPT_BASE=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
 while :; do
     case $1 in
         -i|--install)
             install
             shift
             ;;
+        --)
+            shift
+            break
+            ;;
         *)
-            config ${SCRIPT_BASE}
             break
     esac
 

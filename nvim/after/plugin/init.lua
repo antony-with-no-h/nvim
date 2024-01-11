@@ -1,4 +1,13 @@
-local tscope = require('telescope.builtin')
+local tscope = require('telescope')
+local builtin = require('telescope.builtin')
 
-vim.keymap.set('n', '<leader>ff', tscope.find_files, {})
-vim.keymap.set('n', '<leader>fb', tscope.buffers, {})
+tscope.setup {
+    pickers = {
+        find_files = {
+            hidden = true
+        }
+    }
+}
+
+vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
+vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
