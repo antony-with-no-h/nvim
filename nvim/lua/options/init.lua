@@ -10,6 +10,7 @@ vim.o.colorcolumn = 80
 vim.o.signcolumn = "yes"
 vim.o.scrolloff = 8
 vim.o.relativenumber = true
+vim.o.number = true
 vim.o.wrap = false
 vim.o.termguicolors = true
 
