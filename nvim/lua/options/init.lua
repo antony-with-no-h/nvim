@@ -13,6 +13,7 @@ vim.o.relativenumber = true
 vim.o.number = true
 vim.o.wrap = false
 vim.o.termguicolors = true
+vim.o.hlsearch = false
 
 -- behaviour
 vim.o.mouse = ""
